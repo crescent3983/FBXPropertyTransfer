@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D4137193-85A6-4A1E-9EB3-61C0ADB05C36}</ProjectGuid>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>MyFBXPropertyTransfer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CLRSupport>false</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CLRSupport>false</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;FBXSDK_NEW_API;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;FBXSDK_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>C:\Program Files\Autodesk\3ds Max 2021 SDK\maxsdk\include;C:\Program Files\Autodesk\FBX\FBX Extensions SDK\2020.0.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libfbxsdk-adsk.lib;edmodel.lib;core.lib;geom.lib;gfx.lib;mesh.lib;maxutil.lib;maxscrpt.lib;bmm.lib;mnmath.lib;paramblk2.lib;igame.lib;poly.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\Autodesk\3ds Max 2021 SDK\maxsdk\lib\x64\Release;C:\Program Files\Autodesk\FBX\FBX Extensions SDK\2020.0.1\lib\vs2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;FBXSDK_NEW_API;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;FBXSDK_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>C:\Program Files\Autodesk\3ds Max 2021 SDK\maxsdk\include;C:\Program Files\Autodesk\FBX\FBX Extensions SDK\2020.0.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libfbxsdk-adsk.lib;edmodel.lib;core.lib;geom.lib;gfx.lib;mesh.lib;maxutil.lib;maxscrpt.lib;bmm.lib;mnmath.lib;paramblk2.lib;igame.lib;poly.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\Autodesk\3ds Max 2021 SDK\maxsdk\lib\x64\Release;C:\Program Files\Autodesk\FBX\FBX Extensions SDK\2020.0.1\lib\vs2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FBXPropertyTransfer.h" />
+    <ClInclude Include="Utility.h" />
+    <ClInclude Include="Wrapper\FbxMesh\FbxBinormalWrapper.h" />
+    <ClInclude Include="Wrapper\FbxMesh\FbxPropertyTemplate.h" />
+    <ClInclude Include="Wrapper\FbxMesh\FbxMeshRefWrapper.h" />
+    <ClInclude Include="Wrapper\MaxMesh\MaxUVWrapper.h" />
+    <ClInclude Include="Wrapper\MaxMesh\MaxMeshWrapper.h" />
+    <ClInclude Include="Wrapper\MaxMesh\MaxNormalWrapper.h" />
+    <ClInclude Include="Wrapper\MaxMesh\MaxVertexColorWrapper.h" />
+    <ClInclude Include="Wrapper\PropertyWrapper.h" />
+    <ClInclude Include="Wrapper\FbxMesh\FbxMeshWrapper.h" />
+    <ClInclude Include="Wrapper\FbxMesh\FbxNormalWrapper.h" />
+    <ClInclude Include="Wrapper\FbxMesh\FbxTangentWrapper.h" />
+    <ClInclude Include="Wrapper\FbxMesh\FbxUVWrapper.h" />
+    <ClInclude Include="Wrapper\FbxMesh\FbxVertexColorWrapper.h" />
+    <ClInclude Include="Wrapper\MaxMNMesh\MaxMNMeshWrapper.h" />
+    <ClInclude Include="Wrapper\MaxMNMesh\MaxMNNormalWrapper.h" />
+    <ClInclude Include="Wrapper\MaxMNMesh\MaxMNUVWrapper.h" />
+    <ClInclude Include="Wrapper\MaxMNMesh\MaxMNVertexColorWrapper.h" />
+    <ClInclude Include="Wrapper\MeshWrapper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FBXPropertyTransfer.cpp" />
+    <ClCompile Include="Utility.cpp" />
+    <ClCompile Include="Wrapper\FbxMesh\FbxMeshRefWrapper.cpp" />
+    <ClCompile Include="Wrapper\MaxMesh\MaxMeshWrapper.cpp" />
+    <ClCompile Include="Wrapper\FbxMesh\FbxMeshWrapper.cpp" />
+    <ClCompile Include="Wrapper\MaxMNMesh\MaxMNMeshWrapper.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
